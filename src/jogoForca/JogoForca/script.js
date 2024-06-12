@@ -5,7 +5,7 @@ const contentGuessWord = document.querySelector(".guess-word");
 const img = document.getElementById("ImagemForca");
 const contentClue = document.querySelector(".clue");
 const btnNew = document.querySelector(".new");
-const PalavraAtual = "";
+let PalavraAtual = "";
 btnNew.onclick = () => init();
 let indexImg;
 
@@ -23,7 +23,8 @@ function generateGuessSection() {
   contentGuessWord.textContent = "";
 
   const { word, clue } = getWord();
-  
+  PalavraAtual = word
+
   const wordWithoutAccent = word
   
     .normalize("NFD")
