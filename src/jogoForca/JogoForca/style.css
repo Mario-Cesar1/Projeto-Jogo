@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+.TelaPrincipal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,9 +68,19 @@ button:hover {
   font-size: 18px;
 }
 
+body{
+  background-image: url(/Images/b.png);
+  background-size: cover;
+}
+
 @media (max-width:768px) {
   main {
     flex-direction: column;
     padding: 10px;
+  }
+
+  body{
+    background-image: none;
+    background-size: 0%;
   }
 }

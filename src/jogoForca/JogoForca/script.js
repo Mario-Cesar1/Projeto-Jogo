@@ -2,9 +2,10 @@ import getWord from "./words.js";
 
 const contentBtns = document.querySelector(".btns");
 const contentGuessWord = document.querySelector(".guess-word");
-const img = document.querySelector("img");
+const img = document.getElementById("ImagemForca");
 const contentClue = document.querySelector(".clue");
 const btnNew = document.querySelector(".new");
+const PalavraAtual = "";
 btnNew.onclick = () => init();
 let indexImg;
 
@@ -22,16 +23,25 @@ function generateGuessSection() {
   contentGuessWord.textContent = "";
 
   const { word, clue } = getWord();
+  
   const wordWithoutAccent = word
+  
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 
   Array.from(wordWithoutAccent).forEach((letter) => {
     const span = document.createElement("span");
 
-    span.textContent = "_";
-    span.setAttribute("word", letter.toUpperCase());
-    contentGuessWord.appendChild(span);
+    if (letter !== " ") {
+      span.textContent = "_";
+      span.setAttribute("word", letter.toUpperCase());
+      contentGuessWord.appendChild(span);
+    }
+    else{
+      span.textContent = "-"
+      span.setAttribute("word", letter.toUpperCase());
+      contentGuessWord.appendChild(span);
+    }
   });
 
   contentClue.textContent = `Dica: ${clue}`;
@@ -43,7 +53,7 @@ function wrongAnswer() {
 
   if (indexImg === 7) {
     setTimeout(() => {
-      alert("Perdeu :/");
+      alert("Perdeu :/ | Resposta: " + PalavraAtual);
       init();
     }, 100);
   }

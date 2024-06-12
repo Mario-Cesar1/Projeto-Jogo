@@ -1,24 +1,11 @@
 const words = [
-  { word: "abacaxi", clue: "Fruta tropical" },
-  { word: "elefante", clue: "Animal de grande porte com tromba longa" },
-  { word: "computador", clue: "Dispositivo eletrônico" },
-  { word: "girafa", clue: "Animal alto, com pescoço longo" },
-  { word: "chocolate", clue: "Doce feito de cacau" },
-  { word: "piano", clue: "Instrumento musical com teclas" },
-  { word: "tigre", clue: "Felino selvagem" },
-  { word: "esmeralda", clue: "Tipo de pedra preciosa" },
-  { word: "navio", clue: "Embarcação no mar" },
-  { word: "telefone", clue: "Dispositivo de comunicação" },
-  { word: "floresta", clue: "Área com muitas árvores" },
-  { word: "quadrado", clue: "Figura geométrica de quatro lados" },
-  { word: "foguete", clue: "Veículo espacial" },
-  { word: "sorvete", clue: "Doce gelado" },
-  { word: "bicicleta", clue: "Veículo de duas rodas" },
-  { word: "avião", clue: "Meio de transporte aéreo" },
-  { word: "macaco", clue: "Primate arbóreo" },
-  { word: "raios", clue: "Descargas elétricas na atmosfera" },
-  { word: "montanha", clue: "Elevação natural da terra" },
-  { word: "vela", clue: "Objeto para iluminação" },
+  { word: "Leonardo de Alencar", clue: "reconhecido principalmente por seu papel como líder comunitário e empresário" },
+  { word: "Chico Surdo", clue: "Criador do barco de fogo" },
+  { word: "José Antônio", clue: "Ficou conhecido internacionalmente no mundo das artes" },
+  { word: "Judite Melo", clue: "Famosa por suas esculturas que ultrapassaram os limites de Estância" },
+  { word: "Florial Santos", clue: "Fez sua primeira exposição no ano de 1933" },
+  { word: "Cosme e Damião", clue: "Gêmeos reconhecidos internacionalmente pelas obras que retratavam o convívio local" },
+
 ];
 
 export default function getWord() {
