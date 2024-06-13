@@ -5,7 +5,6 @@ const contentGuessWord = document.querySelector(".guess-word");
 const img = document.getElementById("ImagemForca");
 const contentClue = document.querySelector(".clue");
 const btnNew = document.querySelector(".new");
-let PalavraAtual = "";
 btnNew.onclick = () => init();
 let indexImg;
 
@@ -23,7 +22,6 @@ function generateGuessSection() {
   contentGuessWord.textContent = "";
 
   const { word, clue } = getWord();
-  PalavraAtual = word
 
   const wordWithoutAccent = word
   
@@ -54,7 +52,8 @@ function wrongAnswer() {
 
   if (indexImg === 7) {
     setTimeout(() => {
-      alert("Perdeu :/ | Resposta: " + PalavraAtual);
+      const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop2'));
+            myModal.show();
       init();
     }, 100);
   }
@@ -74,7 +73,8 @@ function verifyLetter(letter) {
 
   if (won) {
     setTimeout(() => {
-      alert("Ganhou!!!");
+      const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+      myModal.show();
       init();
     }, 100);
   }
